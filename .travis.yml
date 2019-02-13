@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.7"
+
+install:
+  - echo "Aqui se instalan las dependencias"
+  - pip install -r requeriments.txt
+
+before_script:
+  - echo "Antes de ejecutar un script"
+
+script:
+  - cd Peliculas
+  - python manage.py test
+
+notifications:
+email: false
