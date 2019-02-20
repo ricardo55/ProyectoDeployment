@@ -1,8 +1,10 @@
 language: python
 
-python:
-  - "3.7"
-
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
 install:
   - echo "Aqui se instalan las dependencias"
   - pip install -r requeriments.txt
@@ -13,6 +15,10 @@ before_script:
 script:
   - cd Peliculas
   - python manage.py test
+  - flake8 --exclude=*migrations*,*settings* .
+  - coverage run --source='.' --omit=*test*,*migrations*,*__init*,*settings*,*apps*,*wsgi* manage.py test
+  - coverage report
+  - coverage html
 
 notifications:
 email: false
