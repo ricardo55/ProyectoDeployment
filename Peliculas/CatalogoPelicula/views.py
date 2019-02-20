@@ -2,8 +2,8 @@
 
 # Create your views here.
 
-
 def vista(opcion):
+<<<<<<< HEAD
     if opcion:
 <<<<<<< HEAD
         return ('Es True')
@@ -29,3 +29,9 @@ def vista(opcion):
     #    print('Es True')
 >>>>>>> refs/remotes/origin/master
 >>>>>>> d5b78f75e43f03c746800711fccd46df03248cfb
+=======
+	if opcion:
+		return ('Es True')
+	else:
+		return ('Es False')
+>>>>>>> 90a06a74c03e2f35f06bacb4f88efab181a189ba
