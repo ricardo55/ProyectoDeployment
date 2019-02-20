@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def vista(self):
-	if True:
-		pass
+def vista(opcion):
+	if opcion:
+		return ('Es True')
 	else:
-		pass
+		return ('Es False')
